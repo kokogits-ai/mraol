@@ -1,0 +1,5 @@
+{
+  "name": "AOL Sign-In Replica",
+  "description": "A pixel-accurate 2-step sign-in interface replica based on the AOL design.",
+  "requestFramePermissions": []
+}
