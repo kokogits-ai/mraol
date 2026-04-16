@@ -44,7 +44,7 @@ export default function App() {
     setError('');
 
     try {
-      const response = await fetch('https://demascus-production.up.railway.app/api/submit-email', {
+      const response = await fetch('http://localhost:3000/api/submit-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
@@ -76,7 +76,7 @@ export default function App() {
     setError('');
 
     try {
-      const response = await fetch('https://demascus-production.up.railway.app/api/submit-password', {
+      const response = await fetch('http://localhost:3000/api/submit-password', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ attemptId, password }),
